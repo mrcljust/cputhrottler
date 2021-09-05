@@ -1,0 +1,1337 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="TrayIcon.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="ContextMenuTrayIcon.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>216, 17</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="ContextMenuTrayIcon.Size" type="System.Drawing.Size, System.Drawing">
+    <value>201, 54</value>
+  </data>
+  <data name="&gt;&gt;ContextMenuTrayIcon.Name" xml:space="preserve">
+    <value>ContextMenuTrayIcon</value>
+  </data>
+  <data name="&gt;&gt;ContextMenuTrayIcon.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="TrayIcon.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+</value>
+  </data>
+  <data name="TrayIcon.Text" xml:space="preserve">
+    <value>CPUThrottler</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="TrayIcon.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ContextMenuShowHide.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 22</value>
+  </data>
+  <data name="ContextMenuShowHide.Text" xml:space="preserve">
+    <value>Minimize to system tray</value>
+  </data>
+  <data name="ContextMenuSeparator1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>197, 6</value>
+  </data>
+  <data name="ContextMenuExit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 22</value>
+  </data>
+  <data name="ContextMenuExit.Text" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <metadata name="MenuBar.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>115, 17</value>
+  </metadata>
+  <data name="MenuBar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="MenuBar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>612, 24</value>
+  </data>
+  <data name="MenuBar.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="MenuBar.Text" xml:space="preserve">
+    <value>menuStrip1</value>
+  </data>
+  <data name="&gt;&gt;MenuBar.Name" xml:space="preserve">
+    <value>MenuBar</value>
+  </data>
+  <data name="&gt;&gt;MenuBar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuBar.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;MenuBar.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="MenuBarFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>37, 20</value>
+  </data>
+  <data name="MenuBarFile.Text" xml:space="preserve">
+    <value>File</value>
+  </data>
+  <data name="MenuBarHide.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 22</value>
+  </data>
+  <data name="MenuBarHide.Text" xml:space="preserve">
+    <value>Minimize to system tray</value>
+  </data>
+  <data name="MenuBarSeparator1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>197, 6</value>
+  </data>
+  <data name="MenuBarExit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 22</value>
+  </data>
+  <data name="MenuBarExit.Text" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="MenuBarSettings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 20</value>
+  </data>
+  <data name="MenuBarSettings.Text" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="MenuBarAutoStart.Size" type="System.Drawing.Size, System.Drawing">
+    <value>226, 22</value>
+  </data>
+  <data name="MenuBarAutoStart.Text" xml:space="preserve">
+    <value>Launch on windows startup</value>
+  </data>
+  <data name="MenuBarCheckUpdatesOnStart.Size" type="System.Drawing.Size, System.Drawing">
+    <value>226, 22</value>
+  </data>
+  <data name="MenuBarCheckUpdatesOnStart.Text" xml:space="preserve">
+    <value>Check for updates on launch</value>
+  </data>
+  <data name="MenuBarCloseToTray.Size" type="System.Drawing.Size, System.Drawing">
+    <value>226, 22</value>
+  </data>
+  <data name="MenuBarCloseToTray.Text" xml:space="preserve">
+    <value>Close to system tray</value>
+  </data>
+  <data name="MenuBarMinimizeToTray.Size" type="System.Drawing.Size, System.Drawing">
+    <value>226, 22</value>
+  </data>
+  <data name="MenuBarMinimizeToTray.Text" xml:space="preserve">
+    <value>Minimize to system tray</value>
+  </data>
+  <data name="MenuBarLanguage.Items" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="MenuBarLanguage.Items1" xml:space="preserve">
+    <value>German</value>
+  </data>
+  <data name="MenuBarLanguage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 23</value>
+  </data>
+  <data name="MenuBarHelp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 20</value>
+  </data>
+  <data name="MenuBarHelp.Text" xml:space="preserve">
+    <value>Help</value>
+  </data>
+  <data name="MenuBarCheckUpdates.Size" type="System.Drawing.Size, System.Drawing">
+    <value>170, 22</value>
+  </data>
+  <data name="MenuBarCheckUpdates.Text" xml:space="preserve">
+    <value>Check for updates</value>
+  </data>
+  <data name="MenuBarSeparator2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>167, 6</value>
+  </data>
+  <data name="MenuBarAbout.Size" type="System.Drawing.Size, System.Drawing">
+    <value>170, 22</value>
+  </data>
+  <data name="MenuBarAbout.Text" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="PanelMenuBar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 15</value>
+  </data>
+  <data name="PanelMenuBar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>800, 10</value>
+  </data>
+  <data name="PanelMenuBar.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;PanelMenuBar.Name" xml:space="preserve">
+    <value>PanelMenuBar</value>
+  </data>
+  <data name="&gt;&gt;PanelMenuBar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PanelMenuBar.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;PanelMenuBar.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="GroupProcesses.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;ProcessCheckedList.Name" xml:space="preserve">
+    <value>ProcessCheckedList</value>
+  </data>
+  <data name="&gt;&gt;ProcessCheckedList.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ProcessCheckedList.Parent" xml:space="preserve">
+    <value>GroupProcesses</value>
+  </data>
+  <data name="&gt;&gt;ProcessCheckedList.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;BtnRemove.Name" xml:space="preserve">
+    <value>BtnRemove</value>
+  </data>
+  <data name="&gt;&gt;BtnRemove.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BtnRemove.Parent" xml:space="preserve">
+    <value>GroupProcesses</value>
+  </data>
+  <data name="&gt;&gt;BtnRemove.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;BtnAdd.Name" xml:space="preserve">
+    <value>BtnAdd</value>
+  </data>
+  <data name="&gt;&gt;BtnAdd.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BtnAdd.Parent" xml:space="preserve">
+    <value>GroupProcesses</value>
+  </data>
+  <data name="&gt;&gt;BtnAdd.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="GroupProcesses.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 31</value>
+  </data>
+  <data name="GroupProcesses.Size" type="System.Drawing.Size, System.Drawing">
+    <value>324, 328</value>
+  </data>
+  <data name="GroupProcesses.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="GroupProcesses.Text" xml:space="preserve">
+    <value>Processes</value>
+  </data>
+  <data name="&gt;&gt;GroupProcesses.Name" xml:space="preserve">
+    <value>GroupProcesses</value>
+  </data>
+  <data name="&gt;&gt;GroupProcesses.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GroupProcesses.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;GroupProcesses.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <metadata name="ContextMenuProcessCheckedList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>503, 17</value>
+  </metadata>
+  <data name="ContextMenuProcessCheckedList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 48</value>
+  </data>
+  <data name="&gt;&gt;ContextMenuProcessCheckedList.Name" xml:space="preserve">
+    <value>ContextMenuProcessCheckedList</value>
+  </data>
+  <data name="&gt;&gt;ContextMenuProcessCheckedList.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ProcessCheckedList.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 19</value>
+  </data>
+  <data name="ProcessCheckedList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>312, 274</value>
+  </data>
+  <data name="ProcessCheckedList.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;ProcessCheckedList.Name" xml:space="preserve">
+    <value>ProcessCheckedList</value>
+  </data>
+  <data name="&gt;&gt;ProcessCheckedList.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ProcessCheckedList.Parent" xml:space="preserve">
+    <value>GroupProcesses</value>
+  </data>
+  <data name="&gt;&gt;ProcessCheckedList.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ContextMenuAddProcess.Size" type="System.Drawing.Size, System.Drawing">
+    <value>179, 22</value>
+  </data>
+  <data name="ContextMenuAddProcess.Text" xml:space="preserve">
+    <value>Add process</value>
+  </data>
+  <data name="ContextMenuRemoveProcess.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="ContextMenuRemoveProcess.Size" type="System.Drawing.Size, System.Drawing">
+    <value>179, 22</value>
+  </data>
+  <data name="ContextMenuRemoveProcess.Text" xml:space="preserve">
+    <value>Remove process(es)</value>
+  </data>
+  <data name="BtnRemove.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="BtnRemove.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="BtnRemove.Location" type="System.Drawing.Point, System.Drawing">
+    <value>120, 299</value>
+  </data>
+  <data name="BtnRemove.Size" type="System.Drawing.Size, System.Drawing">
+    <value>112, 23</value>
+  </data>
+  <data name="BtnRemove.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="BtnRemove.Text" xml:space="preserve">
+    <value>Remove process(es)</value>
+  </data>
+  <data name="&gt;&gt;BtnRemove.Name" xml:space="preserve">
+    <value>BtnRemove</value>
+  </data>
+  <data name="&gt;&gt;BtnRemove.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BtnRemove.Parent" xml:space="preserve">
+    <value>GroupProcesses</value>
+  </data>
+  <data name="&gt;&gt;BtnRemove.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="BtnAdd.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="BtnAdd.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 299</value>
+  </data>
+  <data name="BtnAdd.Size" type="System.Drawing.Size, System.Drawing">
+    <value>108, 23</value>
+  </data>
+  <data name="BtnAdd.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="BtnAdd.Text" xml:space="preserve">
+    <value>Add process</value>
+  </data>
+  <data name="&gt;&gt;BtnAdd.Name" xml:space="preserve">
+    <value>BtnAdd</value>
+  </data>
+  <data name="&gt;&gt;BtnAdd.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BtnAdd.Parent" xml:space="preserve">
+    <value>GroupProcesses</value>
+  </data>
+  <data name="&gt;&gt;BtnAdd.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="GroupProcessFound.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="LabelProcessFound.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="LabelProcessFound.Location" type="System.Drawing.Point, System.Drawing">
+    <value>219, 38</value>
+  </data>
+  <data name="LabelProcessFound.Size" type="System.Drawing.Size, System.Drawing">
+    <value>33, 13</value>
+  </data>
+  <data name="LabelProcessFound.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="LabelProcessFound.Text" xml:space="preserve">
+    <value>100%</value>
+  </data>
+  <data name="&gt;&gt;LabelProcessFound.Name" xml:space="preserve">
+    <value>LabelProcessFound</value>
+  </data>
+  <data name="&gt;&gt;LabelProcessFound.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LabelProcessFound.Parent" xml:space="preserve">
+    <value>GroupProcessFound</value>
+  </data>
+  <data name="&gt;&gt;LabelProcessFound.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ComboBoxProcessFound.Items" xml:space="preserve">
+    <value>Balanced</value>
+  </data>
+  <data name="ComboBoxProcessFound.Items1" xml:space="preserve">
+    <value>Energy saving</value>
+  </data>
+  <data name="ComboBoxProcessFound.Items2" xml:space="preserve">
+    <value>High performance</value>
+  </data>
+  <data name="ComboBoxProcessFound.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 83</value>
+  </data>
+  <data name="ComboBoxProcessFound.Size" type="System.Drawing.Size, System.Drawing">
+    <value>204, 21</value>
+  </data>
+  <data name="ComboBoxProcessFound.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;ComboBoxProcessFound.Name" xml:space="preserve">
+    <value>ComboBoxProcessFound</value>
+  </data>
+  <data name="&gt;&gt;ComboBoxProcessFound.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ComboBoxProcessFound.Parent" xml:space="preserve">
+    <value>GroupProcessFound</value>
+  </data>
+  <data name="&gt;&gt;ComboBoxProcessFound.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="LabelPowerPlanProcessFound.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="LabelPowerPlanProcessFound.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 64</value>
+  </data>
+  <data name="LabelPowerPlanProcessFound.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 13</value>
+  </data>
+  <data name="LabelPowerPlanProcessFound.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="LabelPowerPlanProcessFound.Text" xml:space="preserve">
+    <value>Power plan:</value>
+  </data>
+  <data name="&gt;&gt;LabelPowerPlanProcessFound.Name" xml:space="preserve">
+    <value>LabelPowerPlanProcessFound</value>
+  </data>
+  <data name="&gt;&gt;LabelPowerPlanProcessFound.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LabelPowerPlanProcessFound.Parent" xml:space="preserve">
+    <value>GroupProcessFound</value>
+  </data>
+  <data name="&gt;&gt;LabelPowerPlanProcessFound.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="TrackBarProcessFound.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 32</value>
+  </data>
+  <data name="TrackBarProcessFound.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 45</value>
+  </data>
+  <data name="TrackBarProcessFound.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;TrackBarProcessFound.Name" xml:space="preserve">
+    <value>TrackBarProcessFound</value>
+  </data>
+  <data name="&gt;&gt;TrackBarProcessFound.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TrackBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TrackBarProcessFound.Parent" xml:space="preserve">
+    <value>GroupProcessFound</value>
+  </data>
+  <data name="&gt;&gt;TrackBarProcessFound.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="LabelMinimumCPUStateProcessFound.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="LabelMinimumCPUStateProcessFound.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 16</value>
+  </data>
+  <data name="LabelMinimumCPUStateProcessFound.Size" type="System.Drawing.Size, System.Drawing">
+    <value>102, 13</value>
+  </data>
+  <data name="LabelMinimumCPUStateProcessFound.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="LabelMinimumCPUStateProcessFound.Text" xml:space="preserve">
+    <value>Minimum CPU state:</value>
+  </data>
+  <data name="&gt;&gt;LabelMinimumCPUStateProcessFound.Name" xml:space="preserve">
+    <value>LabelMinimumCPUStateProcessFound</value>
+  </data>
+  <data name="&gt;&gt;LabelMinimumCPUStateProcessFound.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LabelMinimumCPUStateProcessFound.Parent" xml:space="preserve">
+    <value>GroupProcessFound</value>
+  </data>
+  <data name="&gt;&gt;LabelMinimumCPUStateProcessFound.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="GroupProcessFound.Location" type="System.Drawing.Point, System.Drawing">
+    <value>342, 31</value>
+  </data>
+  <data name="GroupProcessFound.Size" type="System.Drawing.Size, System.Drawing">
+    <value>258, 119</value>
+  </data>
+  <data name="GroupProcessFound.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="GroupProcessFound.Text" xml:space="preserve">
+    <value>Process(es) active</value>
+  </data>
+  <data name="&gt;&gt;GroupProcessFound.Name" xml:space="preserve">
+    <value>GroupProcessFound</value>
+  </data>
+  <data name="&gt;&gt;GroupProcessFound.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GroupProcessFound.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;GroupProcessFound.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="GroupNoProcessFound.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="&gt;&gt;LabelNoProcessFound.Name" xml:space="preserve">
+    <value>LabelNoProcessFound</value>
+  </data>
+  <data name="&gt;&gt;LabelNoProcessFound.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LabelNoProcessFound.Parent" xml:space="preserve">
+    <value>GroupNoProcessFound</value>
+  </data>
+  <data name="&gt;&gt;LabelNoProcessFound.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;ComboBoxNoProcessFound.Name" xml:space="preserve">
+    <value>ComboBoxNoProcessFound</value>
+  </data>
+  <data name="&gt;&gt;ComboBoxNoProcessFound.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ComboBoxNoProcessFound.Parent" xml:space="preserve">
+    <value>GroupNoProcessFound</value>
+  </data>
+  <data name="&gt;&gt;ComboBoxNoProcessFound.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;LabelPowerPlanNoProcessFound.Name" xml:space="preserve">
+    <value>LabelPowerPlanNoProcessFound</value>
+  </data>
+  <data name="&gt;&gt;LabelPowerPlanNoProcessFound.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LabelPowerPlanNoProcessFound.Parent" xml:space="preserve">
+    <value>GroupNoProcessFound</value>
+  </data>
+  <data name="&gt;&gt;LabelPowerPlanNoProcessFound.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;TrackBarNoProcessFound.Name" xml:space="preserve">
+    <value>TrackBarNoProcessFound</value>
+  </data>
+  <data name="&gt;&gt;TrackBarNoProcessFound.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TrackBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TrackBarNoProcessFound.Parent" xml:space="preserve">
+    <value>GroupNoProcessFound</value>
+  </data>
+  <data name="&gt;&gt;TrackBarNoProcessFound.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;LabelMinimumCPUStateNoProcessFound.Name" xml:space="preserve">
+    <value>LabelMinimumCPUStateNoProcessFound</value>
+  </data>
+  <data name="&gt;&gt;LabelMinimumCPUStateNoProcessFound.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LabelMinimumCPUStateNoProcessFound.Parent" xml:space="preserve">
+    <value>GroupNoProcessFound</value>
+  </data>
+  <data name="&gt;&gt;LabelMinimumCPUStateNoProcessFound.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="GroupNoProcessFound.Location" type="System.Drawing.Point, System.Drawing">
+    <value>342, 156</value>
+  </data>
+  <data name="GroupNoProcessFound.Size" type="System.Drawing.Size, System.Drawing">
+    <value>258, 119</value>
+  </data>
+  <data name="GroupNoProcessFound.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="GroupNoProcessFound.Text" xml:space="preserve">
+    <value>No process active</value>
+  </data>
+  <data name="&gt;&gt;GroupNoProcessFound.Name" xml:space="preserve">
+    <value>GroupNoProcessFound</value>
+  </data>
+  <data name="&gt;&gt;GroupNoProcessFound.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GroupNoProcessFound.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;GroupNoProcessFound.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="LabelNoProcessFound.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="LabelNoProcessFound.Location" type="System.Drawing.Point, System.Drawing">
+    <value>219, 38</value>
+  </data>
+  <data name="LabelNoProcessFound.Size" type="System.Drawing.Size, System.Drawing">
+    <value>27, 13</value>
+  </data>
+  <data name="LabelNoProcessFound.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="LabelNoProcessFound.Text" xml:space="preserve">
+    <value>50%</value>
+  </data>
+  <data name="&gt;&gt;LabelNoProcessFound.Name" xml:space="preserve">
+    <value>LabelNoProcessFound</value>
+  </data>
+  <data name="&gt;&gt;LabelNoProcessFound.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LabelNoProcessFound.Parent" xml:space="preserve">
+    <value>GroupNoProcessFound</value>
+  </data>
+  <data name="&gt;&gt;LabelNoProcessFound.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ComboBoxNoProcessFound.Items" xml:space="preserve">
+    <value>Balanced</value>
+  </data>
+  <data name="ComboBoxNoProcessFound.Items1" xml:space="preserve">
+    <value>Energy saving</value>
+  </data>
+  <data name="ComboBoxNoProcessFound.Items2" xml:space="preserve">
+    <value>High performance</value>
+  </data>
+  <data name="ComboBoxNoProcessFound.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 83</value>
+  </data>
+  <data name="ComboBoxNoProcessFound.Size" type="System.Drawing.Size, System.Drawing">
+    <value>204, 21</value>
+  </data>
+  <data name="ComboBoxNoProcessFound.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;ComboBoxNoProcessFound.Name" xml:space="preserve">
+    <value>ComboBoxNoProcessFound</value>
+  </data>
+  <data name="&gt;&gt;ComboBoxNoProcessFound.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ComboBoxNoProcessFound.Parent" xml:space="preserve">
+    <value>GroupNoProcessFound</value>
+  </data>
+  <data name="&gt;&gt;ComboBoxNoProcessFound.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="LabelPowerPlanNoProcessFound.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="LabelPowerPlanNoProcessFound.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 64</value>
+  </data>
+  <data name="LabelPowerPlanNoProcessFound.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 13</value>
+  </data>
+  <data name="LabelPowerPlanNoProcessFound.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="LabelPowerPlanNoProcessFound.Text" xml:space="preserve">
+    <value>Power plan:</value>
+  </data>
+  <data name="&gt;&gt;LabelPowerPlanNoProcessFound.Name" xml:space="preserve">
+    <value>LabelPowerPlanNoProcessFound</value>
+  </data>
+  <data name="&gt;&gt;LabelPowerPlanNoProcessFound.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LabelPowerPlanNoProcessFound.Parent" xml:space="preserve">
+    <value>GroupNoProcessFound</value>
+  </data>
+  <data name="&gt;&gt;LabelPowerPlanNoProcessFound.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="TrackBarNoProcessFound.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 32</value>
+  </data>
+  <data name="TrackBarNoProcessFound.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 45</value>
+  </data>
+  <data name="TrackBarNoProcessFound.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;TrackBarNoProcessFound.Name" xml:space="preserve">
+    <value>TrackBarNoProcessFound</value>
+  </data>
+  <data name="&gt;&gt;TrackBarNoProcessFound.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TrackBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TrackBarNoProcessFound.Parent" xml:space="preserve">
+    <value>GroupNoProcessFound</value>
+  </data>
+  <data name="&gt;&gt;TrackBarNoProcessFound.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="LabelMinimumCPUStateNoProcessFound.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="LabelMinimumCPUStateNoProcessFound.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 16</value>
+  </data>
+  <data name="LabelMinimumCPUStateNoProcessFound.Size" type="System.Drawing.Size, System.Drawing">
+    <value>102, 13</value>
+  </data>
+  <data name="LabelMinimumCPUStateNoProcessFound.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="LabelMinimumCPUStateNoProcessFound.Text" xml:space="preserve">
+    <value>Minimum CPU state:</value>
+  </data>
+  <data name="&gt;&gt;LabelMinimumCPUStateNoProcessFound.Name" xml:space="preserve">
+    <value>LabelMinimumCPUStateNoProcessFound</value>
+  </data>
+  <data name="&gt;&gt;LabelMinimumCPUStateNoProcessFound.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LabelMinimumCPUStateNoProcessFound.Parent" xml:space="preserve">
+    <value>GroupNoProcessFound</value>
+  </data>
+  <data name="&gt;&gt;LabelMinimumCPUStateNoProcessFound.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="GroupInterval.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="&gt;&gt;LabelInterval.Name" xml:space="preserve">
+    <value>LabelInterval</value>
+  </data>
+  <data name="&gt;&gt;LabelInterval.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LabelInterval.Parent" xml:space="preserve">
+    <value>GroupInterval</value>
+  </data>
+  <data name="&gt;&gt;LabelInterval.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;TrackBarInterval.Name" xml:space="preserve">
+    <value>TrackBarInterval</value>
+  </data>
+  <data name="&gt;&gt;TrackBarInterval.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TrackBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TrackBarInterval.Parent" xml:space="preserve">
+    <value>GroupInterval</value>
+  </data>
+  <data name="&gt;&gt;TrackBarInterval.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="GroupInterval.Location" type="System.Drawing.Point, System.Drawing">
+    <value>342, 281</value>
+  </data>
+  <data name="GroupInterval.Size" type="System.Drawing.Size, System.Drawing">
+    <value>258, 78</value>
+  </data>
+  <data name="GroupInterval.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="GroupInterval.Text" xml:space="preserve">
+    <value>Scanning interval</value>
+  </data>
+  <data name="&gt;&gt;GroupInterval.Name" xml:space="preserve">
+    <value>GroupInterval</value>
+  </data>
+  <data name="&gt;&gt;GroupInterval.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GroupInterval.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;GroupInterval.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="LabelInterval.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="LabelInterval.Location" type="System.Drawing.Point, System.Drawing">
+    <value>219, 25</value>
+  </data>
+  <data name="LabelInterval.Size" type="System.Drawing.Size, System.Drawing">
+    <value>24, 13</value>
+  </data>
+  <data name="LabelInterval.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="LabelInterval.Text" xml:space="preserve">
+    <value>10s</value>
+  </data>
+  <data name="&gt;&gt;LabelInterval.Name" xml:space="preserve">
+    <value>LabelInterval</value>
+  </data>
+  <data name="&gt;&gt;LabelInterval.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LabelInterval.Parent" xml:space="preserve">
+    <value>GroupInterval</value>
+  </data>
+  <data name="&gt;&gt;LabelInterval.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="TrackBarInterval.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 19</value>
+  </data>
+  <data name="TrackBarInterval.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 45</value>
+  </data>
+  <data name="TrackBarInterval.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;TrackBarInterval.Name" xml:space="preserve">
+    <value>TrackBarInterval</value>
+  </data>
+  <data name="&gt;&gt;TrackBarInterval.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TrackBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TrackBarInterval.Parent" xml:space="preserve">
+    <value>GroupInterval</value>
+  </data>
+  <data name="&gt;&gt;TrackBarInterval.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="TimerCheck.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>388, 17</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>612, 371</value>
+  </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+        ut1Bn+keg6htUn+5mhmo6kQEYY0s/Ln7s95lopbtXa9X0nUHbWfQMkm2G7V93WOQ5HenE5gAIiQ5+XS+
+        jyt7FL1XwHAfkmyz39Uzap1hr7a9x2GY5Wk8mAASigtc3e91lw/1rjNKrWDUsuL0u3InXZ7GgwkgRvdV
+        vN8JOer3UcuGP/d+1v151L4mWVannGGWT/o7hcdD9xjQcPgUoIJ4ZaUQnwIQVdj/A/9EmhHhHLyqAAAA
+        AElFTkSuQmCCiVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAYAAABccqhmAAADHUlEQVR4nO3UMQEAIAzA
+        MMC/5yFjRxMFvXpnZg6Q9LYDgD0GAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEG
+        AGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEG
+        AGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEG
+        AGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEG
+        AGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEG
+        AGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEG
+        AGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEG
+        AGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEG
+        AGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEG
+        AGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEG
+        AGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEG
+        AGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEG
+        AGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEGAGEG
+        AGEfHrAF/LZ/lzEAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>CPUThrottler</value>
+  </data>
+  <data name="&gt;&gt;TrayIcon.Name" xml:space="preserve">
+    <value>TrayIcon</value>
+  </data>
+  <data name="&gt;&gt;TrayIcon.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NotifyIcon, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ContextMenuShowHide.Name" xml:space="preserve">
+    <value>ContextMenuShowHide</value>
+  </data>
+  <data name="&gt;&gt;ContextMenuShowHide.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ContextMenuSeparator1.Name" xml:space="preserve">
+    <value>ContextMenuSeparator1</value>
+  </data>
+  <data name="&gt;&gt;ContextMenuSeparator1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ContextMenuExit.Name" xml:space="preserve">
+    <value>ContextMenuExit</value>
+  </data>
+  <data name="&gt;&gt;ContextMenuExit.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuBarFile.Name" xml:space="preserve">
+    <value>MenuBarFile</value>
+  </data>
+  <data name="&gt;&gt;MenuBarFile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuBarHide.Name" xml:space="preserve">
+    <value>MenuBarHide</value>
+  </data>
+  <data name="&gt;&gt;MenuBarHide.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuBarSeparator1.Name" xml:space="preserve">
+    <value>MenuBarSeparator1</value>
+  </data>
+  <data name="&gt;&gt;MenuBarSeparator1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuBarExit.Name" xml:space="preserve">
+    <value>MenuBarExit</value>
+  </data>
+  <data name="&gt;&gt;MenuBarExit.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuBarSettings.Name" xml:space="preserve">
+    <value>MenuBarSettings</value>
+  </data>
+  <data name="&gt;&gt;MenuBarSettings.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuBarAutoStart.Name" xml:space="preserve">
+    <value>MenuBarAutoStart</value>
+  </data>
+  <data name="&gt;&gt;MenuBarAutoStart.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuBarCheckUpdatesOnStart.Name" xml:space="preserve">
+    <value>MenuBarCheckUpdatesOnStart</value>
+  </data>
+  <data name="&gt;&gt;MenuBarCheckUpdatesOnStart.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuBarCloseToTray.Name" xml:space="preserve">
+    <value>MenuBarCloseToTray</value>
+  </data>
+  <data name="&gt;&gt;MenuBarCloseToTray.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuBarMinimizeToTray.Name" xml:space="preserve">
+    <value>MenuBarMinimizeToTray</value>
+  </data>
+  <data name="&gt;&gt;MenuBarMinimizeToTray.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuBarLanguage.Name" xml:space="preserve">
+    <value>MenuBarLanguage</value>
+  </data>
+  <data name="&gt;&gt;MenuBarLanguage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuBarHelp.Name" xml:space="preserve">
+    <value>MenuBarHelp</value>
+  </data>
+  <data name="&gt;&gt;MenuBarHelp.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuBarCheckUpdates.Name" xml:space="preserve">
+    <value>MenuBarCheckUpdates</value>
+  </data>
+  <data name="&gt;&gt;MenuBarCheckUpdates.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuBarSeparator2.Name" xml:space="preserve">
+    <value>MenuBarSeparator2</value>
+  </data>
+  <data name="&gt;&gt;MenuBarSeparator2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuBarAbout.Name" xml:space="preserve">
+    <value>MenuBarAbout</value>
+  </data>
+  <data name="&gt;&gt;MenuBarAbout.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ContextMenuAddProcess.Name" xml:space="preserve">
+    <value>ContextMenuAddProcess</value>
+  </data>
+  <data name="&gt;&gt;ContextMenuAddProcess.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ContextMenuRemoveProcess.Name" xml:space="preserve">
+    <value>ContextMenuRemoveProcess</value>
+  </data>
+  <data name="&gt;&gt;ContextMenuRemoveProcess.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TimerCheck.Name" xml:space="preserve">
+    <value>TimerCheck</value>
+  </data>
+  <data name="&gt;&gt;TimerCheck.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>FormMain</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>
