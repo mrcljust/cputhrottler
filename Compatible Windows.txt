@@ -1,8 +1,0 @@
-vista
-7
-8
-10
-
-
-Minimum supported client 	Windows Vista [desktop apps only]
-Minimum supported server 	Windows Server 2008 [desktop apps only]
