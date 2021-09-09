@@ -39,7 +39,7 @@ namespace CPUThrottler.Language {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("CPUThrottler.Lang.Resources.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("CPUThrottler.Language.Resources.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -120,6 +120,15 @@ namespace CPUThrottler.Language {
         public static string SecondChar {
             get {
                 return ResourceManager.GetString("SecondChar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Show ähnelt.
+        /// </summary>
+        public static string Show {
+            get {
+                return ResourceManager.GetString("Show", resourceCulture);
             }
         }
         

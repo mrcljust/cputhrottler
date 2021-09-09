@@ -15,7 +15,7 @@ namespace CPUThrottler.Forms
         private bool _performNewEnergyChange = true;
         private string _lastEnergyChange = "";
         public string Language = "en-US"; //set default language
-        private bool _doNotSafeConfig = false;
+        private bool _doNotSafeLanguage = false;
         public FormMain()
         {
             InitializeComponent();
@@ -203,7 +203,10 @@ namespace CPUThrottler.Forms
             key.SetValue("CheckForUpdatesOnStart", MenuBarCheckUpdatesOnStart.Checked);
             key.SetValue("CloseToTray", MenuBarCloseToTray.Checked);
             key.SetValue("MinimizeToTray", MenuBarMinimizeToTray.Checked);
-            key.SetValue("Language", Language);
+            if(!_doNotSafeLanguage)
+            {
+                key.SetValue("Language", Language);
+            }
 
 
             /*if (full)
@@ -387,8 +390,7 @@ namespace CPUThrottler.Forms
             }
             else
             {
-                if(!_doNotSafeConfig)
-                    SaveConfig(true);
+                SaveConfig(true);
             }
         }
 
@@ -471,9 +473,10 @@ namespace CPUThrottler.Forms
                     Language = "de-DE";
                     break;
             }
-            //SaveConfig(false);
+            SaveConfig(false);
             Process.Start(Application.ExecutablePath);
-            _doNotSafeConfig = true;
+            _doNotSafeLanguage = true;
+            _escalateClose = true;
             Environment.Exit(0);
         }
 

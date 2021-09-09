@@ -138,6 +138,9 @@
   <data name="SecondChar" xml:space="preserve">
     <value>s</value>
   </data>
+  <data name="Show" xml:space="preserve">
+    <value>Anzeigen</value>
+  </data>
   <data name="Version" xml:space="preserve">
     <value>Version </value>
   </data>
