@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29926.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CPUThrottler", "CPUThrottler.csproj", "{CB1764A9-27E4-433C-A338-6D916BB6D124}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CPUThrottler.Language", "..\CPUThrottler.Language\CPUThrottler.Language.csproj", "{61FFA4D7-67AA-4D46-AF69-7024C6B81CAA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CPUThrottler.Language", "CPUThrottler.Language\CPUThrottler.Language.csproj", "{61FFA4D7-67AA-4D46-AF69-7024C6B81CAA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

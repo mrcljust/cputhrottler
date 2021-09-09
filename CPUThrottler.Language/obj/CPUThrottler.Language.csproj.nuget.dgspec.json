@@ -1,36 +1,36 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Marcel\\source\\repos\\CPUThrottler\\CPUThrottler.Language\\CPUThrottler.Language.csproj": {}
+    "F:\\Programmierung\\Visual Studio\\Projekte-VS2019\\cputhrottler\\CPUThrottler.Language\\CPUThrottler.Language.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Marcel\\source\\repos\\CPUThrottler\\CPUThrottler.Language\\CPUThrottler.Language.csproj": {
+    "F:\\Programmierung\\Visual Studio\\Projekte-VS2019\\cputhrottler\\CPUThrottler.Language\\CPUThrottler.Language.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Marcel\\source\\repos\\CPUThrottler\\CPUThrottler.Language\\CPUThrottler.Language.csproj",
-        "projectName": "CPUThrottler.Lang",
-        "projectPath": "C:\\Users\\Marcel\\source\\repos\\CPUThrottler\\CPUThrottler.Language\\CPUThrottler.Language.csproj",
-        "packagesPath": "C:\\Program Files (x86)\\NuGet\\nugetUser\\",
-        "outputPath": "C:\\Users\\Marcel\\source\\repos\\CPUThrottler\\CPUThrottler.Language\\obj\\",
+        "projectUniqueName": "F:\\Programmierung\\Visual Studio\\Projekte-VS2019\\cputhrottler\\CPUThrottler.Language\\CPUThrottler.Language.csproj",
+        "projectName": "CPUThrottler.Language",
+        "projectPath": "F:\\Programmierung\\Visual Studio\\Projekte-VS2019\\cputhrottler\\CPUThrottler.Language\\CPUThrottler.Language.csproj",
+        "packagesPath": "C:\\Users\\Marcel\\.nuget\\packages\\",
+        "outputPath": "F:\\Programmierung\\Visual Studio\\Projekte-VS2019\\cputhrottler\\CPUThrottler.Language\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
           "C:\\Users\\Marcel\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 18.1.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "E:\\DevExpress\\Components\\System\\Components\\Packages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
             "projectReferences": {}
           }
         },
@@ -42,6 +42,7 @@
       },
       "frameworks": {
         "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
           "dependencies": {
             "NETStandard.Library": {
               "suppressParent": "All",
@@ -60,7 +61,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "87lXoCkItVYUlwbiblokWLdQa60qWOwMaGRxIeYHesc9/OetxEYaeCCdbPnpnp0IZu+3HTLd1ipjg3jH/DgxFQ==",
+  "dgSpecHash": "Ks4tuMEJ2ZAy7oeWmYmTsU++m/YAfZwlMFNZDrAl0qpVpFnHMtPa05GUmDql8pDYlX3xV1/nt5fLhjF32LDrzQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Marcel\\source\\repos\\CPUThrottler\\CPUThrottler.Language\\CPUThrottler.Lang.csproj",
+  "projectFilePath": "F:\\Programmierung\\Visual Studio\\Projekte-VS2019\\cputhrottler\\CPUThrottler.Language\\CPUThrottler.Language.csproj",
   "expectedPackageFiles": [
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+    "C:\\Users\\Marcel\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Marcel\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
   ],
   "logs": []
 }
