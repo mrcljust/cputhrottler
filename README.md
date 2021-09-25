@@ -9,4 +9,4 @@ The selection of the power plan and CPU's minimum workload depends on whether on
 * Allow multiple energy-saving profiles
 
 ## Screenshots
-![GitHub Logo](/img/cputhrottler-1.jpg)
+![CPUThrottler EN](/img/cputhrottler-en.jpg)
