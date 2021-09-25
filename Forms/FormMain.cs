@@ -1,21 +1,23 @@
-﻿using System;
+﻿using CPUThrottler.Language;
+using Microsoft.Win32;
+using System;
 using System.Diagnostics;
-using System.Drawing;
 using System.Linq;
 using System.Reflection;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
-using CPUThrottler.Language;
 
 namespace CPUThrottler.Forms
 {
     public partial class FormMain : Form
     {
-        private bool _escalateClose = false;
-        private bool _languageChangeable = false;
-        private bool _performNewEnergyChange = true;
+        private bool _doNotSafeLanguage;
+        private bool _escalateClose;
+        private bool _languageChangeable;
         private string _lastEnergyChange = "";
+        private bool _performNewEnergyChange = true;
         public string Language = "en-US"; //set default language
-        private bool _doNotSafeLanguage = false;
+
         public FormMain()
         {
             InitializeComponent();
@@ -24,74 +26,63 @@ namespace CPUThrottler.Forms
         public FormMain(string startarg)
         {
             InitializeComponent();
-            if (startarg.Equals("minimized"))
-            {
-                HideForm();
-            }
+            if (startarg.Equals("minimized")) HideForm();
         }
 
         private void FormMain_Load(object sender, EventArgs e)
         {
-            if(MenuBarCheckUpdatesOnStart.Checked)
-            {
-                CheckForUpdates();
-            }
+            if (MenuBarCheckUpdatesOnStart.Checked) CheckForUpdates();
             CheckForProcesses();
             //ReadConfig();
         }
 
         private void CheckForProcesses()
         {
-            if(ProcessCheckedList.Items.Count>0)
+            if (ProcessCheckedList.Items.Count > 0)
             {
                 var processList = Process.GetProcesses();
                 var processNameList = new string[processList.Length];
                 var processArrayId = 0;
-                foreach(var p in processList)
+                foreach (var p in processList)
                 {
                     processNameList[processArrayId] = p.ProcessName;
                     processArrayId++;
                 }
-                bool processFound = false;
+
+                var processFound = false;
                 foreach (ListViewItem lvi in ProcessCheckedList.Items)
                 {
                     if (!lvi.Checked) continue;
                     if (lvi.Text.Contains(".exe"))
                     {
-                        if (processNameList.Contains(lvi.Text) || processNameList.Contains(lvi.Text.Replace(".exe", "")))
-                        {
-                            processFound = true;
-                        }
+                        if (processNameList.Contains(lvi.Text) ||
+                            processNameList.Contains(lvi.Text.Replace(".exe", ""))) processFound = true;
                     }
                     else
                     {
                         if (processNameList.Contains(lvi.Text) || processNameList.Contains(lvi.Text + ".exe"))
-                        {
                             processFound = true;
-                        }
                     }
                 }
+
                 if (processFound && (_performNewEnergyChange || _lastEnergyChange != "Process found"))
-                {
                     EnergyChange(true);
-                }
 
                 if (!processFound && (_performNewEnergyChange || _lastEnergyChange != "No process found"))
-                {
                     EnergyChange(false);
-                }
             }
-            else if(_performNewEnergyChange || _lastEnergyChange != "No process found")
+            else if (_performNewEnergyChange || _lastEnergyChange != "No process found")
             {
                 EnergyChange(false);
             }
         }
+
         private static Guid GetCurrentScheme()
         {
             //returns guid of active power scheme
             var zero = IntPtr.Zero;
-            var activeScheme = (int)WinAPI.PowerGetActiveScheme(IntPtr.Zero, ref zero);
-            return (Guid)System.Runtime.InteropServices.Marshal.PtrToStructure(zero, typeof(Guid));
+            var activeScheme = (int)WinApi.PowerGetActiveScheme(IntPtr.Zero, ref zero);
+            return (Guid)Marshal.PtrToStructure(zero, typeof(Guid));
         }
 
         private void EnergyChange(bool processFound)
@@ -101,7 +92,6 @@ namespace CPUThrottler.Forms
             var cpuMaxGuid = new Guid("75b0ae3f-bce0-45a7-8c89-c9611c25e100");
             var processorPowerSettingGuid = new Guid("54533251-82be-4824-96c1-47b60b740d00");
             var schemeGuid = GetCurrentScheme();
-
 
             try
             {
@@ -118,17 +108,20 @@ namespace CPUThrottler.Forms
                             //Balanced
                             schemeGuid = new Guid("381b4222-f694-41f0-9685-ff5bb260df2e");
                             break;
+
                         case 1:
                             //Energy saving
                             schemeGuid = new Guid("a1841308-3541-4fab-bc81-f71556f20b4a");
                             break;
+
                         case 2:
                             //High performance
                             schemeGuid = new Guid("8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c");
                             break;
                     }
 
-                    WinAPI.PowerWriteACValueIndex(IntPtr.Zero, ref schemeGuid, ref processorPowerSettingGuid, ref cpuMinGuid, uint.Parse(this.TrackBarProcessFound.Value.ToString()));
+                    WinApi.PowerWriteACValueIndex(IntPtr.Zero, ref schemeGuid, ref processorPowerSettingGuid,
+                        ref cpuMinGuid, uint.Parse(TrackBarProcessFound.Value.ToString()));
                 }
                 else
                 {
@@ -141,23 +134,27 @@ namespace CPUThrottler.Forms
                             //Balanced
                             schemeGuid = new Guid("381b4222-f694-41f0-9685-ff5bb260df2e");
                             break;
+
                         case 1:
                             //Energy saving
                             schemeGuid = new Guid("a1841308-3541-4fab-bc81-f71556f20b4a");
                             break;
+
                         case 2:
                             //High performance
                             schemeGuid = new Guid("8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c");
                             break;
                     }
 
-                    WinAPI.PowerWriteACValueIndex(IntPtr.Zero, ref schemeGuid, ref processorPowerSettingGuid, ref cpuMinGuid, uint.Parse(this.TrackBarNoProcessFound.Value.ToString()));
+                    WinApi.PowerWriteACValueIndex(IntPtr.Zero, ref schemeGuid, ref processorPowerSettingGuid,
+                        ref cpuMinGuid, uint.Parse(TrackBarNoProcessFound.Value.ToString()));
                 }
 
-                WinAPI.PowerWriteACValueIndex(IntPtr.Zero, ref schemeGuid, ref processorPowerSettingGuid, ref cpuMaxGuid, 0U);
-                WinAPI.PowerSetActiveScheme(IntPtr.Zero, ref schemeGuid);
+                WinApi.PowerWriteACValueIndex(IntPtr.Zero, ref schemeGuid, ref processorPowerSettingGuid,
+                    ref cpuMaxGuid, 0U);
+                WinApi.PowerSetActiveScheme(IntPtr.Zero, ref schemeGuid);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Console.Write(ex.Message);
             }
@@ -165,17 +162,17 @@ namespace CPUThrottler.Forms
 
         private static void SetAutoStart(bool boolTemp)
         {
-            Microsoft.Win32.RegistryKey key;
-            if(boolTemp)
+            RegistryKey key;
+            if (boolTemp)
             {
-                key = Microsoft.Win32.Registry.CurrentUser.CreateSubKey(@"SOFTWARE\Microsoft\Windows\CurrentVersion\Run");
-                var applicationPath = "\"" + Application.ExecutablePath.ToString() + "\" -minimized";
+                key = Registry.CurrentUser.CreateSubKey(@"SOFTWARE\Microsoft\Windows\CurrentVersion\Run");
+                var applicationPath = "\"" + Application.ExecutablePath + "\" -minimized";
                 key.SetValue("CPUThrottler", applicationPath);
                 key.Close();
             }
             else
             {
-                key = Microsoft.Win32.Registry.CurrentUser.CreateSubKey(@"SOFTWARE\Microsoft\Windows\CurrentVersion\Run");
+                key = Registry.CurrentUser.CreateSubKey(@"SOFTWARE\Microsoft\Windows\CurrentVersion\Run");
                 if (key == null) return;
                 key.DeleteValue("CPUThrottler", false);
                 key.Close();
@@ -184,30 +181,26 @@ namespace CPUThrottler.Forms
 
         private void ShowForm()
         {
-            this.Show();
-            this.WindowState = FormWindowState.Normal;
+            Show();
+            WindowState = FormWindowState.Normal;
             ContextMenuShowHide.Text = Resources.ContextMenu_ShowHide_TextMinimize;
         }
 
         private void HideForm()
         {
             //SaveConfig(true);
-            this.Hide();
+            Hide();
             ContextMenuShowHide.Text = Resources.Show;
         }
 
         private void SaveConfig(bool full)
         {
-            var key = Microsoft.Win32.Registry.CurrentUser.CreateSubKey(@"SOFTWARE\Just IT Solutions\CPUThrottler\Config");
+            var key = Registry.CurrentUser.CreateSubKey(@"SOFTWARE\Just IT Solutions\CPUThrottler\Config");
             key.SetValue("AutoStart", MenuBarAutoStart.Checked);
             key.SetValue("CheckForUpdatesOnStart", MenuBarCheckUpdatesOnStart.Checked);
             key.SetValue("CloseToTray", MenuBarCloseToTray.Checked);
             key.SetValue("MinimizeToTray", MenuBarMinimizeToTray.Checked);
-            if(!_doNotSafeLanguage)
-            {
-                key.SetValue("Language", Language);
-            }
-
+            if (!_doNotSafeLanguage) key.SetValue("Language", Language);
 
             /*if (full)
             {
@@ -238,48 +231,47 @@ namespace CPUThrottler.Forms
             }*/
             key.Close();
 
-
             SetAutoStart(MenuBarAutoStart.Checked);
 
-            key = Microsoft.Win32.Registry.CurrentUser.CreateSubKey(@"SOFTWARE\Just IT Solutions\CPUThrottler\Profiles\1");
-            key.SetValue("ProcessFoundMinCPU", TrackBarProcessFound.Value, Microsoft.Win32.RegistryValueKind.String);
-            key.SetValue("ProcessFoundStateIndex", ComboBoxProcessFound.SelectedIndex, Microsoft.Win32.RegistryValueKind.String);
-            key.SetValue("NoProcessFoundMinCPU", TrackBarNoProcessFound.Value, Microsoft.Win32.RegistryValueKind.String);
-            key.SetValue("NoProcessFoundStateIndex", ComboBoxNoProcessFound.SelectedIndex, Microsoft.Win32.RegistryValueKind.String);
-            key.SetValue("ScanInterval", TrackBarInterval.Value, Microsoft.Win32.RegistryValueKind.String);
+            key = Registry.CurrentUser.CreateSubKey(@"SOFTWARE\Just IT Solutions\CPUThrottler\Profiles\1");
+            key.SetValue("ProcessFoundMinCPU", TrackBarProcessFound.Value, RegistryValueKind.String);
+            key.SetValue("ProcessFoundStateIndex", ComboBoxProcessFound.SelectedIndex, RegistryValueKind.String);
+            key.SetValue("NoProcessFoundMinCPU", TrackBarNoProcessFound.Value, RegistryValueKind.String);
+            key.SetValue("NoProcessFoundStateIndex", ComboBoxNoProcessFound.SelectedIndex, RegistryValueKind.String);
+            key.SetValue("ScanInterval", TrackBarInterval.Value, RegistryValueKind.String);
             key.Close();
 
-            key = Microsoft.Win32.Registry.CurrentUser.CreateSubKey(@"SOFTWARE\Just IT Solutions\CPUThrottler\Profiles\1\Processes");
-            for(var processId=0; processId < ProcessCheckedList.Items.Count; processId++)
-            {
+            Registry.CurrentUser.DeleteSubKey(@"SOFTWARE\Just IT Solutions\CPUThrottler\Profiles\1\Processes");
+            key = Registry.CurrentUser.CreateSubKey(@"SOFTWARE\Just IT Solutions\CPUThrottler\Profiles\1\Processes");
+            for (var processId = 0; processId < ProcessCheckedList.Items.Count; processId++)
                 key.SetValue(ProcessCheckedList.Items[processId].Text, ProcessCheckedList.Items[processId].Checked);
-            }
             key.Close();
         }
 
         private void ReadConfig()
         {
-            var key = Microsoft.Win32.Registry.CurrentUser.CreateSubKey(@"SOFTWARE\Just IT Solutions\CPUThrottler\Config");
-            string menu = key.GetValue("AutoStart").ToString();
+            var key = Registry.CurrentUser.CreateSubKey(@"SOFTWARE\Just IT Solutions\CPUThrottler\Config");
+            var menu = key.GetValue("AutoStart").ToString();
             MenuBarAutoStart.Checked = Convert.ToBoolean(key.GetValue("AutoStart", "True"));
             MenuBarCheckUpdatesOnStart.Checked = Convert.ToBoolean(key.GetValue("CheckForUpdatesOnStart", "True"));
             MenuBarCloseToTray.Checked = Convert.ToBoolean(key.GetValue("CloseToTray", "True"));
             MenuBarMinimizeToTray.Checked = Convert.ToBoolean(key.GetValue("MinimizeToTray", "True"));
             //Language already set in Program.cs
-            switch(Language)
+            switch (Language)
             {
                 case "en-US":
                     MenuBarLanguage.SelectedIndex = 0;
                     break;
+
                 case "de-DE":
                     MenuBarLanguage.SelectedIndex = 1;
                     break;
             }
+
             _languageChangeable = true;
 
-
-            bool desktopX = false;
-            bool desktopY = false;
+            var desktopX = false;
+            var desktopY = false;
             /*foreach (var screen in Screen.AllScreens)
             {
                 // For each screen, add the screen properties to a list box.
@@ -298,7 +290,7 @@ namespace CPUThrottler.Forms
         }*/
             key.Close();
 
-            key = Microsoft.Win32.Registry.CurrentUser.CreateSubKey(@"SOFTWARE\Just IT Solutions\CPUThrottler\Profiles\1");
+            key = Registry.CurrentUser.CreateSubKey(@"SOFTWARE\Just IT Solutions\CPUThrottler\Profiles\1");
             TrackBarProcessFound.Value = Convert.ToInt32(key.GetValue("ProcessFoundMinCPU", "100"));
             ComboBoxProcessFound.SelectedIndex = Convert.ToInt32(key.GetValue("ProcessFoundStateIndex", 2));
             TrackBarNoProcessFound.Value = Convert.ToInt32(key.GetValue("NoProcessFoundMinCPU", "50"));
@@ -306,13 +298,13 @@ namespace CPUThrottler.Forms
             TrackBarInterval.Value = Convert.ToInt32(key.GetValue("ScanInterval", 10));
             key.Close();
 
-            if (Microsoft.Win32.Registry.CurrentUser.OpenSubKey(
+            if (Registry.CurrentUser.OpenSubKey(
                 @"SOFTWARE\Just IT Solutions\CPUThrottler\Profiles\1\Processes", false) == null) return;
-            key = Microsoft.Win32.Registry.CurrentUser.OpenSubKey(@"SOFTWARE\Just IT Solutions\CPUThrottler\Profiles\1\Processes");
-            if(key?.ValueCount>0)
+            key = Registry.CurrentUser.OpenSubKey(@"SOFTWARE\Just IT Solutions\CPUThrottler\Profiles\1\Processes");
+            if (key?.ValueCount > 0)
             {
                 var processNamesRegistry = key.GetValueNames();
-                foreach(var processNameTemp in processNamesRegistry)
+                foreach (var processNameTemp in processNamesRegistry)
                 {
                     var itemTemp = new ListViewItem(processNameTemp)
                     {
@@ -321,36 +313,32 @@ namespace CPUThrottler.Forms
                     ProcessCheckedList.Items.Add(itemTemp);
                 }
             }
+
             key?.Close();
         }
 
         private void CheckForUpdates()
         {
-
         }
 
         private void MenuBarExit_Click(object sender, EventArgs e)
         {
             _escalateClose = true;
-            this.Close();
+            Close();
         }
 
         private void ContextMenuExit_Click(object sender, EventArgs e)
         {
             _escalateClose = true;
-            this.Close();
+            Close();
         }
 
         private void ContextMenuShowHide_Click(object sender, EventArgs e)
         {
-            if (this.Visible)
-            {
+            if (Visible)
                 HideForm();
-            }
             else
-            {
                 ShowForm();
-            }
         }
 
         private void MenuBarHide_Click(object sender, EventArgs e)
@@ -360,16 +348,12 @@ namespace CPUThrottler.Forms
 
         private void TrayIcon_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            if (this.Visible)
+            if (Visible)
             {
-                if(this.WindowState == FormWindowState.Minimized)
-                {
+                if (WindowState == FormWindowState.Minimized)
                     ShowForm();
-                }
                 else
-                {
                     HideForm();
-                }
             }
             else
             {
@@ -379,14 +363,14 @@ namespace CPUThrottler.Forms
 
         private void FormMain_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if(MenuBarCloseToTray.Checked && !_escalateClose && e.CloseReason == CloseReason.UserClosing)
+            if (MenuBarCloseToTray.Checked && !_escalateClose && e.CloseReason == CloseReason.UserClosing)
             {
-                if (!this.ContainsFocus) return;
+                if (!ContainsFocus) return;
                 e.Cancel = true;
                 var fi = typeof(Form).GetField("closeReason", BindingFlags.Instance | BindingFlags.NonPublic);
                 fi.SetValue(this, CloseReason.None);
                 HideForm();
-                TrayIcon.ShowBalloonTip(5, this.Text, Resources.MinimizedToTray, ToolTipIcon.Info);
+                TrayIcon.ShowBalloonTip(5, Text, Resources.MinimizedToTray, ToolTipIcon.Info);
             }
             else
             {
@@ -401,9 +385,9 @@ namespace CPUThrottler.Forms
 
         private void FormMain_Resize(object sender, EventArgs e)
         {
-            if (this.WindowState != FormWindowState.Minimized || !MenuBarMinimizeToTray.Checked) return;
+            if (WindowState != FormWindowState.Minimized || !MenuBarMinimizeToTray.Checked) return;
             HideForm();
-            TrayIcon.ShowBalloonTip(5, this.Text, Resources.MinimizedToTray, ToolTipIcon.Info);
+            TrayIcon.ShowBalloonTip(5, Text, Resources.MinimizedToTray, ToolTipIcon.Info);
         }
 
         private void MenuBarAbout_Click(object sender, EventArgs e)
@@ -417,19 +401,16 @@ namespace CPUThrottler.Forms
             var newFormAddProcess = new FormAddProcess();
             newFormAddProcess.ShowDialog();
             if (newFormAddProcess.Result == null) return;
-            var itemTemp = new ListViewItem(newFormAddProcess.Result) {Checked = true};
+            var itemTemp = new ListViewItem(newFormAddProcess.Result) { Checked = true };
             ProcessCheckedList.Items.Add(itemTemp);
             SaveConfig(true);
         }
 
         private void BtnRemove_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show(this, Resources.RemoveProcessesQuestion, this.Text,
+            if (MessageBox.Show(this, Resources.RemoveProcessesQuestion, Text,
                 MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes) return;
-            foreach(ListViewItem lvi in ProcessCheckedList.SelectedItems)
-            {
-                lvi.Remove();
-            }
+            foreach (ListViewItem lvi in ProcessCheckedList.SelectedItems) lvi.Remove();
             SaveConfig(true);
         }
 
@@ -440,7 +421,7 @@ namespace CPUThrottler.Forms
 
         private void TrackBarInterval_ValueChanged(object sender, EventArgs e)
         {
-            LabelInterval.Text = TrackBarInterval.Value.ToString() + Resources.SecondChar;
+            LabelInterval.Text = TrackBarInterval.Value + Resources.SecondChar;
             TimerCheck.Interval = TrackBarInterval.Value * 1000;
             _performNewEnergyChange = true;
         }
@@ -452,13 +433,13 @@ namespace CPUThrottler.Forms
 
         private void TrackBarNoProcessFound_ValueChanged(object sender, EventArgs e)
         {
-            LabelNoProcessFound.Text = TrackBarNoProcessFound.Value.ToString() + Resources.PercentChar;
+            LabelNoProcessFound.Text = TrackBarNoProcessFound.Value + Resources.PercentChar;
             _performNewEnergyChange = true;
         }
 
         private void TrackBarProcessFound_Scroll(object sender, EventArgs e)
         {
-            LabelProcessFound.Text = TrackBarProcessFound.Value.ToString() + Resources.PercentChar;
+            LabelProcessFound.Text = TrackBarProcessFound.Value + Resources.PercentChar;
         }
 
         private void MenuBarLanguage_SelectedIndexChanged(object sender, EventArgs e)
@@ -469,10 +450,12 @@ namespace CPUThrottler.Forms
                 case 0:
                     Language = "en-US";
                     break;
+
                 case 1:
                     Language = "de-DE";
                     break;
             }
+
             SaveConfig(false);
             Process.Start(Application.ExecutablePath);
             _doNotSafeLanguage = true;
@@ -482,7 +465,7 @@ namespace CPUThrottler.Forms
 
         private void TrackBarProcessFound_ValueChanged(object sender, EventArgs e)
         {
-            LabelProcessFound.Text = TrackBarProcessFound.Value.ToString() + Resources.PercentChar;
+            LabelProcessFound.Text = TrackBarProcessFound.Value + Resources.PercentChar;
             _performNewEnergyChange = true;
         }
 

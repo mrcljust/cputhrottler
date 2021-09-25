@@ -1,8 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using CPUThrottler.Forms;
+using Microsoft.Win32;
+using System;
+using System.Globalization;
 using System.Linq;
+using System.Threading;
 using System.Windows.Forms;
-using CPUThrottler.Forms;
 
 namespace CPUThrottler
 {
@@ -15,27 +17,27 @@ namespace CPUThrottler
             Application.SetCompatibleTextRenderingDefault(false);
             ApplyLanguage();
             var arguments = Environment.GetCommandLineArgs();
-            if(arguments.Contains("-minimized"))
+            if (arguments.Contains("-minimized"))
             {
                 var form = new FormMain("minimized")
-                    {Language = System.Threading.Thread.CurrentThread.CurrentCulture.Name};
+                { Language = Thread.CurrentThread.CurrentCulture.Name };
                 Application.Run();
             }
             else
             {
-                var form = new FormMain {Language = System.Threading.Thread.CurrentThread.CurrentCulture.Name};
+                var form = new FormMain { Language = Thread.CurrentThread.CurrentCulture.Name };
                 Application.Run(form);
             }
         }
 
         private static void ApplyLanguage()
         {
-            var language = Convert.ToString(Microsoft.Win32.Registry.CurrentUser
+            var language = Convert.ToString(Registry.CurrentUser
                 .CreateSubKey(@"SOFTWARE\Just IT Solutions\CPUThrottler\Config")
                 ?.GetValue("Language",
-                    System.Globalization.CultureInfo.InstalledUICulture.Name));
-            System.Threading.Thread.CurrentThread.CurrentCulture = System.Globalization.CultureInfo.GetCultureInfo(language);
-            System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo(language);
+                    CultureInfo.InstalledUICulture.Name));
+            Thread.CurrentThread.CurrentCulture = CultureInfo.GetCultureInfo(language);
+            Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo(language);
         }
     }
 }

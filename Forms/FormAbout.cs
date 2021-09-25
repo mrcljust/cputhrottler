@@ -1,6 +1,7 @@
-﻿using System;
+﻿using CPUThrottler.Language;
+using System;
+using System.Diagnostics;
 using System.Windows.Forms;
-using CPUThrottler.Language;
 
 namespace CPUThrottler.Forms
 {
@@ -17,12 +18,13 @@ namespace CPUThrottler.Forms
             if (IntPtr.Size == 8)
                 cpuType = "x64";
 
-            LabelVersionAndCPU.Text = Resources.Version + Application.ProductVersion + Resources.AboutSplitter + cpuType;
+            LabelVersionAndCPU.Text =
+                Resources.Version + Application.ProductVersion + Resources.AboutSplitter + cpuType;
         }
 
         private void LabelCopyrightLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            System.Diagnostics.Process.Start("https://just-it-solutions.de");
+            Process.Start("https://just-it-solutions.de");
         }
     }
 }
